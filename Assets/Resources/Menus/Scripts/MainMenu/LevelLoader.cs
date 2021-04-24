@@ -2,11 +2,19 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class LevelLoader : MonoBehaviour
 {
-   public void LoadLevel()
-   {
-      SceneManager.LoadScene(1);
-   }
+    [SerializeField] private Button _startGameButton;
+
+    private void Start()
+    {
+        _startGameButton.onClick.AddListener(LoadLevel);
+    }
+
+    public void LoadLevel()
+    {
+        SceneManager.LoadScene(1);
+    }
 }
