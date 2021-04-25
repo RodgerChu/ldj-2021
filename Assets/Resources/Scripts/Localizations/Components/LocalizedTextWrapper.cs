@@ -13,6 +13,7 @@ public class LocalizedTextWrapper : MonoBehaviour
 
     private void Awake()
     {
+        Debug.LogError($"config {_localizationConfig}");
         _localizationConfig.OnLocalizationChanged += UpdateLocale;
     }
 

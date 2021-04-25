@@ -87,4 +87,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6a1c3228008e57b4dbdc2bfd870b36f6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _localizationData: {fileID: 11400000, guid: 157aca5a002d63b4bbdad1e0770e4601, type: 2}
+  _localizationData: {fileID: 11400000, guid: 79e770c17d7a26543be92c2d6440d311, type: 2}

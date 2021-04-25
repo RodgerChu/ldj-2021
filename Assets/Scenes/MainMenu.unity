@@ -662,6 +662,7 @@ GameObject:
   - component: {fileID: 370967073}
   - component: {fileID: 370967075}
   - component: {fileID: 370967074}
+  - component: {fileID: 370967076}
   m_Layer: 5
   m_Name: Text (TMP)
   m_TagString: Untagged
@@ -785,6 +786,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 370967072}
   m_CullTransparentMesh: 1
+--- !u!114 &370967076
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 370967072}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 602c2ba12f9d89b4f9dc937149792dcf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _text: {fileID: 370967074}
+  _localizationKey: button_settings
 --- !u!1 &427053469
 GameObject:
   m_ObjectHideFlags: 0
@@ -1512,6 +1527,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _russianLangButton: {fileID: 2116266839}
   _engLangButton: {fileID: 999242308}
+  _selectedLangColor: {r: 1, g: 0, b: 0, a: 1}
+  _unselectedLangColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
   _russianLanguage: Russian
   _englishLanguage: English
 --- !u!1 &601947076
@@ -2024,6 +2041,7 @@ GameObject:
   - component: {fileID: 826545659}
   - component: {fileID: 826545661}
   - component: {fileID: 826545660}
+  - component: {fileID: 826545662}
   m_Layer: 5
   m_Name: Text (TMP)
   m_TagString: Untagged
@@ -2147,6 +2165,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 826545658}
   m_CullTransparentMesh: 1
+--- !u!114 &826545662
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 826545658}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 602c2ba12f9d89b4f9dc937149792dcf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _text: {fileID: 826545660}
+  _localizationKey: button_exit
 --- !u!1 &857472867
 GameObject:
   m_ObjectHideFlags: 0
@@ -3390,6 +3422,7 @@ GameObject:
   - component: {fileID: 1672234856}
   - component: {fileID: 1672234858}
   - component: {fileID: 1672234857}
+  - component: {fileID: 1672234859}
   m_Layer: 5
   m_Name: Text (TMP)
   m_TagString: Untagged
@@ -3513,6 +3546,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1672234855}
   m_CullTransparentMesh: 1
+--- !u!114 &1672234859
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1672234855}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 602c2ba12f9d89b4f9dc937149792dcf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _text: {fileID: 1672234857}
+  _localizationKey: button_start
 --- !u!1 &1691852234
 GameObject:
   m_ObjectHideFlags: 0
