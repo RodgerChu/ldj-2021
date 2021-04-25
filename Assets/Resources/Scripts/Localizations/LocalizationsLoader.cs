@@ -14,14 +14,13 @@ using Unity.EditorCoroutines.Editor;
 
 public class LocalizationsLoader
 {
-    private string _sheetId = "1fbkFgjUkkYPIowjcrfDshlH9WC1VYDHFdK6wUqNzVoc";
-    private string _page = "Localization";
+    private string _sheetId = "1Q3oh0MHgv8Zjoch2kuQLyG3ggfQyCBxuOFMM4H1AzPU";
+    private string _page = "Localizations";
 
     public IEnumerator DoImport()
     {
         var credentialsJson = AssetDatabase.LoadAssetAtPath<TextAsset>(
             "Assets/Resources/Scripts/Localizations/credentials.json");
-        Debug.LogError($"{credentialsJson}");
         var authTask = GoogleWebAuthorizationBroker.AuthorizeAsync(
             GoogleClientSecrets.Load(new MemoryStream(credentialsJson.bytes)).Secrets,
             new string[] { SheetsService.Scope.SpreadsheetsReadonly },
@@ -128,9 +127,7 @@ public class LocalizationsLoader
         {
             await Progress((float)row / values.Count);
             if (values[row].Count == 0)
-                continue;            
-
-            var stringID = values[row][0].ToString();
+                continue;       
             
             var rowDict = new Dictionary<string, string>();
 
@@ -140,6 +137,10 @@ public class LocalizationsLoader
             {
                 lang = languages[col - 1];
                 var str = values[row][col].ToString();
+                var stringID = values[row][0].ToString();
+
+                if (stringID == "")
+                    continue;
 
                 if (!dict.ContainsKey(lang))
                 {
@@ -148,9 +149,9 @@ public class LocalizationsLoader
 
                 if (dict[lang].ContainsKey(stringID))
                     throw new Exception($"Duplicate string ID \"{stringID}\".");
+                else
+                    dict[lang].Add(stringID, str);
             }
-
-            dict[lang] = rowDict;
         }
 
         var asset = ScriptableObject.CreateInstance<LocalizationData>();
