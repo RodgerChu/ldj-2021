@@ -13,8 +13,8 @@ TagManager:
   - UI
   - Foreground
   - Background
-  - 
-  - 
+  - Platform
+  - Player
   - 
   - 
   - 
@@ -43,4 +43,6 @@ TagManager:
     locked: 0
   - name: Road
     uniqueID: 598128923
+  - name: Interactive
+    uniqueID: 4053445203
     locked: 0

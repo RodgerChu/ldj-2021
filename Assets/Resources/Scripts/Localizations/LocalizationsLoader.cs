@@ -59,12 +59,6 @@ public class LocalizationsLoader
 
         while (!requestTask.IsCompleted)
         {
-            /*if (EditorUtility.DisplayCancelableProgressBar(_page, "Downloading data...", 0.15f))
-            {
-                EditorUtility.ClearProgressBar();
-                Debug.LogWarning("Import cancelled by the user");
-                yield break;
-            }*/
             yield return null;
         }
 

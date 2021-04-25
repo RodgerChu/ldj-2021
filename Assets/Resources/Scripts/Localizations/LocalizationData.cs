@@ -91,7 +91,6 @@ public class LocalizationData : ScriptableObject, ISerializationCallbackReceiver
 
             for(var i = 0; i < str.IDs.Length; i++)
             {
-                Debug.LogError($"lang {lang} | id {str.IDs[i]} | value {str.Values[i]}");
                 idAndValues.Add(str.IDs[i], str.Values[i]);
             }
 

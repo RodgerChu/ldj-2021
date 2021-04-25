@@ -18,7 +18,7 @@ public class JumpHelper : MonoBehaviour
     
     public bool Grounded()
     {
-        return _target.GroundCheckBox.IsTouchingLayers(LayerMask.GetMask("Foreground"));
+        return _target.GroundCheckBox.IsTouchingLayers(LayerMask.GetMask("Foreground", "Platform"));
     }
 
     public bool MayJump()
