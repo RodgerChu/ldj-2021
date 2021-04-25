@@ -1,6 +1,9 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
+using System.Linq;
 
 public class Character : MonoBehaviour
 {
@@ -27,6 +30,11 @@ public class Character : MonoBehaviour
 
     [SerializeField] 
     float _jumpVelocity = 5f;
+    
+    [SerializeField] private int[] _layers;
+    [SerializeField] private GameObject _landParticles;
+    [SerializeField] private Transform _spawnPoint;
+
     public void MoveLeft(bool isLeftMoving)
     {
         _horizontalDirection = -1f;
@@ -58,5 +66,27 @@ public class Character : MonoBehaviour
             _jumpHelper.isStartJumping = false;
         }
         _rb.velocity = velocity;
+    }
+
+    private void OnCollisionEnter2D(Collision2D other)
+    {
+        if (_layers.Contains(other.gameObject.layer))
+        {
+            SpawnGroundParticles(isLanding:true);
+        }
+        else
+        {
+            SpawnGroundParticles(isLanding:false);
+        }
+    }
+
+    public void SpawnGroundParticles(bool isLanding)
+    {
+        if (isLanding)
+        {
+            Instantiate(_landParticles, new Vector3(_spawnPoint.transform.position.x,_spawnPoint.transform.position.y,
+                _spawnPoint.transform.position.z - 2f), _spawnPoint.rotation);
+        }
+        else return;
     }
 }
