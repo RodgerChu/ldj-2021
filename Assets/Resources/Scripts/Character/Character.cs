@@ -11,6 +11,9 @@ public class Character : MonoBehaviour
     private Rigidbody2D _rb;
     public Rigidbody2D Rb => _rb;
 
+    [SerializeField] 
+    private Animator _animator;
+
     [SerializeField]
     private Collider2D _groundCheckBox;
     public Collider2D GroundCheckBox => _groundCheckBox;
@@ -37,24 +40,27 @@ public class Character : MonoBehaviour
 
     public void MoveLeft(bool isLeftMoving)
     {
+        _animator.SetBool("isRunning", true);
         _horizontalDirection = -1f;
         _commonFlipper.SetFlip(_horizontalDirection);
     }
     public void MoveRight(bool isRightMoving)
     {
+        _animator.SetBool("isRunning", true);
         _horizontalDirection = 1f;
         _commonFlipper.SetFlip(_horizontalDirection);
     }
     public void Jump(bool isStartJumping)
     {
+        _animator.SetTrigger("takeOf");
         _jumpHelper.Jump(isStartJumping);
-        
     }
 
     private void Start()
     {
         _currentHorizontalVelocity = _horizontalVelocity;
     }
+
     public void FixedUpdate()
     {
         var velocity = _rb.velocity;
@@ -66,6 +72,16 @@ public class Character : MonoBehaviour
             _jumpHelper.isStartJumping = false;
         }
         _rb.velocity = velocity;
+        if (_rb.velocity.x == 0)
+        {
+            _animator.SetBool("isJumping", true);
+            _animator.SetBool("isRunning", false);
+        }
+        if (_jumpHelper.isFalling && _jumpHelper.Grounded())
+        {
+            _jumpHelper.isFalling = false;
+            _animator.SetBool("isJumping", false);
+        }
     }
 
     private void OnCollisionEnter2D(Collision2D other)

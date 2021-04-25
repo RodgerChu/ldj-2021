@@ -10,6 +10,7 @@ public class JumpHelper : MonoBehaviour
     private int _maxJumpNumbers = 2;
     private int _currentJumpNumbers;
     public bool isStartJumping;
+    public bool isFalling;
 
     public void Start()
     {
@@ -46,6 +47,10 @@ public class JumpHelper : MonoBehaviour
         if (Grounded())
         {
             _currentJumpNumbers = _maxJumpNumbers;
+        }
+        else
+        {
+            isFalling = true;
         }
     }
 }
