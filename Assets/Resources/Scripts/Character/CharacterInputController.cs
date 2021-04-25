@@ -11,6 +11,9 @@ public class CharacterInputController : MonoBehaviour
     [InjectOptional]
     private DialogPopupController _dialogController;
 
+    [InjectOptional]
+    private PauseController _pauseController;
+
     private bool _recieveInput = true;
 
     private void Start()
@@ -19,6 +22,12 @@ public class CharacterInputController : MonoBehaviour
         {
             _dialogController.OnDialogOpened += () => _recieveInput = false;
             _dialogController.OnDialogClosed += () => _recieveInput = true;
+        }
+
+        if (_pauseController != null)
+        {
+            _pauseController.OnPause += () => _recieveInput = false;
+            _pauseController.OnContinue += () => _recieveInput = true;
         }
     }
 

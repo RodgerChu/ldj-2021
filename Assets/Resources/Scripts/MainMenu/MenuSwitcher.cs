@@ -9,7 +9,6 @@ public class MenuSwitcher : MonoBehaviour
     [SerializeField] private MenuSwitchAnimator _animator;
 
     [Space]
-    [SerializeField] private Button _startGameButton;
     [SerializeField] private Button _optionsButton;
     [SerializeField] private Button _exitOptionsButton;
 
