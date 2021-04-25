@@ -15,7 +15,7 @@ TagManager:
   - Background
   - Platform
   - Player
-  - 
+  - Particles
   - 
   - 
   - 
@@ -43,6 +43,7 @@ TagManager:
     locked: 0
   - name: Road
     uniqueID: 598128923
+    locked: 0
   - name: Interactive
     uniqueID: 4053445203
     locked: 0

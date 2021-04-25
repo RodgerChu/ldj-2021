@@ -252,6 +252,9 @@ MonoBehaviour:
   _jumpHelper: {fileID: 1746810489243452401}
   _horizontalVelocity: 8.5
   _jumpVelocity: 14
+  _layers: 0800000006000000
+  _landParticles: {fileID: 3154847656078193745, guid: a124513f9623770cfbbf435e8a28ba2a, type: 3}
+  _spawnPoint: {fileID: 1746810490852468726}
 --- !u!114 &1746810489243452404
 MonoBehaviour:
   m_ObjectHideFlags: 0
