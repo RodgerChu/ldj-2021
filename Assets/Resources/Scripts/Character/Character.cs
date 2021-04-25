@@ -1,6 +1,8 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class Character : MonoBehaviour
 {
@@ -27,6 +29,8 @@ public class Character : MonoBehaviour
 
     [SerializeField] 
     float _jumpVelocity = 5f;
+
+    public UnityEvent Landing;
     public void MoveLeft(bool isLeftMoving)
     {
         _horizontalDirection = -1f;
@@ -58,5 +62,13 @@ public class Character : MonoBehaviour
             _jumpHelper.isStartJumping = false;
         }
         _rb.velocity = velocity;
+    }
+
+    private void OnCollisionEnter2D(Collision2D other)
+    {
+        if (other.gameObject.layer.Equals("Platform") )
+        {
+            
+        }
     }
 }
