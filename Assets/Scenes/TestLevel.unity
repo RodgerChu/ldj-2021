@@ -5448,11 +5448,6 @@ PolygonCollider2D:
       - {x: -6.688276, y: -4.1981783}
       - {x: 55.4178, y: -5.2987566}
       - {x: 55.42713, y: 20.63966}
---- !u!1 &1168108501 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1746810490852468727, guid: 07f54ed9a30a76916a89ad5b1ad4803e, type: 3}
-  m_PrefabInstance: {fileID: 1746810490220551493}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1247221583
 GameObject:
   m_ObjectHideFlags: 0
@@ -18293,7 +18288,7 @@ PrefabInstance:
     - target: {fileID: 1746810489243452407, guid: 07f54ed9a30a76916a89ad5b1ad4803e, type: 3}
       propertyPath: Landing.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 1168108501}
+      objectReference: {fileID: 1290255720}
     - target: {fileID: 1746810489243452407, guid: 07f54ed9a30a76916a89ad5b1ad4803e, type: 3}
       propertyPath: Landing.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
       value: 2

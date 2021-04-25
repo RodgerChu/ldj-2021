@@ -66,9 +66,14 @@ public class Character : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D other)
     {
-        if (other.gameObject.layer.Equals("Platform") )
+        if (other.gameObject.layer.Equals("Platform") || other.gameObject.layer.Equals("Foreground"))
         {
-            
+            //CharactherLanding(isLanded:true);
+            Console.WriteLine("Все хорошо");
+        }
+        else
+        {
+            //CharactherLanding(isLanded:false);
         }
     }
 }
