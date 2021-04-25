@@ -6,7 +6,7 @@ using Zenject;
 
 public class LocalizedTextWrapper : MonoBehaviour
 {
-    [SerializeField] private TextMeshProUGUI _text;
+    public TextMeshProUGUI InnetText;
     [SerializeField] private string _localizationKey;
 
     [Inject] private LocalizationConfig _localizationConfig;
@@ -29,7 +29,7 @@ public class LocalizedTextWrapper : MonoBehaviour
 
     private void UpdateLocale()
     {
-        _text.text = _localizationConfig.GetLocalizedString(_localizationKey);
+        InnetText.text = _localizationConfig.GetLocalizedString(_localizationKey);
     }
 
     private void OnDestroy()
