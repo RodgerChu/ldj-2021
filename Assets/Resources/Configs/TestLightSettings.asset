@@ -15,5 +15,8 @@ MonoBehaviour:
   LightFadeTickTime: 0.1
   LightFadeTickValue: 0.02
   LightFadeDelayAfterLightPowerUp: 5
+  StartingLightRadius: 3
   MinimalLightRadius: 0.5
   MaximumLightRadius: 6
+  WillFadeAway: 0
+  CanCollectFireflyiesOverLimmit: 1

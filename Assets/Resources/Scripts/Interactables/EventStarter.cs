@@ -2,16 +2,23 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
+using Zenject;
 
-public abstract class EventStarter : MonoBehaviour
+public class EventStarter : MonoBehaviour
 {
-    [SerializeField] protected HintPresenter _hint;
-    [SerializeField] protected string _hintAlias;
+    [Inject] protected HintPresenter _hint;
+
+    [SerializeField] protected string _hintAlias = "hint_press_E";
+    [SerializeField] protected UnityEvent _onInteracted;
 
     protected bool _interacted = false;
     private bool _active = false;
 
-    protected abstract void OnInteract();
+    protected virtual void OnInteract()
+    {
+        _interacted = true;
+        _onInteracted?.Invoke();
+    }
 
     public void Update()
     {
@@ -23,7 +30,7 @@ public abstract class EventStarter : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (IsPlayer(collision.gameObject))
+        if (IsPlayer(collision.gameObject) && !_interacted)
         {
             _active = true;
             _hint.Show(_hintAlias);

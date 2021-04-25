@@ -24,8 +24,10 @@ public class PlayerLightController : MonoBehaviour
 
     private void Start()
     {
-        _playerLight.pointLightOuterRadius = _lightSettings.MaximumLightRadius;
-        StartFadeLight();
+        _playerLight.pointLightOuterRadius = _lightSettings.StartingLightRadius;
+
+        if (_lightSettings.WillFadeAway)
+            StartFadeLight();
     }
 
     public bool AddPower()
@@ -34,7 +36,7 @@ public class PlayerLightController : MonoBehaviour
         var additionalPower = _maximumLightRadius / 10;
         currPower += additionalPower;
 
-        if (currPower > _maximumLightRadius)
+        if (currPower > _maximumLightRadius && !_lightSettings.CanCollectFireflyiesOverLimmit)
         {
             return false;
         }

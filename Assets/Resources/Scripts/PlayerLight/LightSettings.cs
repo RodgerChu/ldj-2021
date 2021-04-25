@@ -10,6 +10,11 @@ public class LightSettings : ScriptableObject
     public float LightFadeDelayAfterLightPowerUp = 5f;
 
     [Space]
+    public float StartingLightRadius = 3f;
     public float MinimalLightRadius = 0.5f;
     public float MaximumLightRadius = 6f;
+
+    [Space]
+    public bool WillFadeAway = true;
+    public bool CanCollectFireflyiesOverLimmit = true;
 }
