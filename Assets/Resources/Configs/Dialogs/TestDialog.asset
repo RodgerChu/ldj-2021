@@ -1,0 +1,39 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 57d5381ad876ca04a9a04aace9a40e87, type: 3}
+  m_Name: TestDialog
+  m_EditorClassIdentifier: 
+  _speakerOne:
+    ID: 0
+    SpeakerSprite: {fileID: -9095717837082945937, guid: a32481843b804ce2183d05ca87f0255d, type: 3}
+  _speakerTwo:
+    ID: 1
+    SpeakerSprite: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
+  _phrases:
+  - SpeakerId: 0
+    PhraseAlias: dialog_1_1
+    PhraseColor: {r: 1, g: 1, b: 1, a: 1}
+  - SpeakerId: 1
+    PhraseAlias: dialog_1_2
+    PhraseColor: {r: 0.4669811, g: 0.75523055, b: 1, a: 1}
+  - SpeakerId: 0
+    PhraseAlias: dialog_1_3
+    PhraseColor: {r: 1, g: 1, b: 1, a: 1}
+  - SpeakerId: 1
+    PhraseAlias: dialog_1_4
+    PhraseColor: {r: 1, g: 1, b: 1, a: 1}
+  - SpeakerId: 0
+    PhraseAlias: dialog_1_5
+    PhraseColor: {r: 1, g: 1, b: 1, a: 1}
+  - SpeakerId: 1
+    PhraseAlias: dialog_1_6
+    PhraseColor: {r: 1, g: 1, b: 1, a: 1}

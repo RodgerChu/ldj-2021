@@ -3,20 +3,21 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
-public class EventStarter : MonoBehaviour
+public abstract class EventStarter : MonoBehaviour
 {
-    [SerializeField] private HintPresenter _hint;
-    [SerializeField] private string _hintAlias;
+    [SerializeField] protected HintPresenter _hint;
+    [SerializeField] protected string _hintAlias;
 
-    public UnityEvent<GameObject> OnInteract;
-
+    protected bool _interacted = false;
     private bool _active = false;
+
+    protected abstract void OnInteract();
 
     public void Update()
     {
         if (Input.GetKeyDown(KeyCode.E) && _active)
         {
-            OnInteract.Invoke(gameObject);
+            OnInteract();
         }
     }
 
@@ -31,7 +32,6 @@ public class EventStarter : MonoBehaviour
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-        Debug.Log("exit");
         if (IsPlayer(collision.gameObject))
         {
             _active = false;
