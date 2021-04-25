@@ -8,6 +8,7 @@ public class LanguageChangeHandler : MonoBehaviour
 {
     [SerializeField] private Button _russianLangButton;
     [SerializeField] private Button _engLangButton;
+    [SerializeField] private LayerMask _layer;
 
     [Space]
     [SerializeField] private Color _selectedLangColor = Color.red;
@@ -16,7 +17,7 @@ public class LanguageChangeHandler : MonoBehaviour
     [Space]
     [SerializeField] private string _russianLanguage = "Russian";
     [SerializeField] private string _englishLanguage = "English";
-
+    
     [Inject] private LocalizationConfig _localizationConfig;
 
     private void Start()
