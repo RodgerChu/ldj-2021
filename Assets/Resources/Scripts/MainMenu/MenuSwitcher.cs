@@ -14,8 +14,6 @@ public class MenuSwitcher : MonoBehaviour
 
     private void Start()
     {
-        //TODO: ADD TRANSITION TO GAME SCENE
-        
         _optionsButton.onClick.AddListener(_animator.SwitchToOptions);
         _exitOptionsButton.onClick.AddListener(_animator.SwitchToMainMenu);
     }

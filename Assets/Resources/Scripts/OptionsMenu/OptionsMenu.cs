@@ -9,7 +9,7 @@ public class OptionsMenu : MonoBehaviour
     [SerializeField] private Slider _musicVolumeSlider;
     [SerializeField] private Slider _soundsVolumeSlider;
 
-    [Inject] private SoundOptions _soundOptions;
+    [Inject] private SoundController _soundOptions;
 
     private void Start()
     {

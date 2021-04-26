@@ -484,6 +484,7 @@ GameObject:
   - component: {fileID: 97647414}
   - component: {fileID: 97647417}
   - component: {fileID: 97647416}
+  - component: {fileID: 97647418}
   m_Layer: 0
   m_Name: SceneContext
   m_TagString: Untagged
@@ -574,6 +575,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _controller: {fileID: 0}
+--- !u!114 &97647418
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 97647413}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 127fcc5ba9e026c40a0a1bf4b285015a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _clip: {fileID: 8300000, guid: 7f922fb2183e79442a5c714e3c7b29c3, type: 3}
+  _loop: 1
 --- !u!1 &158563831
 GameObject:
   m_ObjectHideFlags: 0
@@ -2659,7 +2674,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1157229914}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -6.397754, y: -1.4975722, z: -10}
+  m_LocalPosition: {x: -6.2732997, y: -1.4975722, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1302518737}
@@ -3877,7 +3892,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1746810490804840636, guid: 07f54ed9a30a76916a89ad5b1ad4803e, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 5.6435113
+      value: 8.702423
+      objectReference: {fileID: 0}
+    - target: {fileID: 1746810490804840636, guid: 07f54ed9a30a76916a89ad5b1ad4803e, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 2.7149632
       objectReference: {fileID: 0}
     - target: {fileID: 2242068977094717470, guid: 07f54ed9a30a76916a89ad5b1ad4803e, type: 3}
       propertyPath: m_IsActive

@@ -37,6 +37,7 @@ public class Character : MonoBehaviour
     [SerializeField] private int[] _layers;
     [SerializeField] private GameObject _landParticles;
     [SerializeField] private Transform _spawnPoint;
+    [SerializeField] private FootstepsSoundsPlayer _soundsPlayer;
 
     public void MoveLeft(bool isLeftMoving)
     {
@@ -81,6 +82,15 @@ public class Character : MonoBehaviour
         {
             _jumpHelper.isFalling = false;
             _animator.SetBool("isJumping", false);
+        }
+
+        if (velocity.x != 0 && _jumpHelper.Grounded())
+        {
+            _soundsPlayer.Play();
+        }
+        else
+        {
+            _soundsPlayer.Stop();
         }
     }
 
