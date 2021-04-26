@@ -1274,7 +1274,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _rb: {fileID: 3676043115994004145}
-  _animator: {fileID: 3676043115994004150}
+  animator: {fileID: 3676043115994004150}
   _groundCheckBox: {fileID: 855196366381515320}
   _sideCheckBox: {fileID: 855196366512477666}
   _commonFlipper: {fileID: 3676043115994004154}
@@ -1325,7 +1325,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _target: {fileID: 3676043115994004156}
   isStartJumping: 0
-  isFalling: 0
+  isFalling: 1
 --- !u!1 &3676043116178914051
 GameObject:
   m_ObjectHideFlags: 0
