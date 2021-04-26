@@ -26,6 +26,7 @@ public class JumpHelper : MonoBehaviour
     {
         if (_currentJumpNumbers > 0)
         {
+
             return true;
         }
         else return false;
@@ -36,6 +37,7 @@ public class JumpHelper : MonoBehaviour
         if (MayJump())
         {
             _currentJumpNumbers--;
+            _target.animator.SetTrigger("takeOf");
             isStartJumping = true;
         }
         
