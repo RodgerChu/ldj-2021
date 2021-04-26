@@ -11,10 +11,14 @@ public class PausePopupAnimator : MonoBehaviour
     public void Show()
     {
         _canvas.DOFade(1, _animationDuration);
+        _canvas.blocksRaycasts = true;
+        _canvas.interactable = true;
     }
 
     public void Hide()
     {
         _canvas.DOFade(0, _animationDuration);
+        _canvas.blocksRaycasts = false;
+        _canvas.interactable = false;
     }
 }
