@@ -31,7 +31,7 @@ MonoBehaviour:
     - dialog_1_4
     - dialog_1_5
     - dialog_1_6
-    - dialolg_2_1
+    - dialog_2_1
     - dialog_2_2
     - dialog_2_3
     - dialog_2_4
@@ -60,6 +60,7 @@ MonoBehaviour:
     - settings_music_volume
     - settings_sounds_volume
     - back_to_menu
+    - pause_title
     Values:
     - Fairy Snares
     - "\u041D\u0430\u0447\u0430\u0442\u044C"
@@ -169,6 +170,7 @@ MonoBehaviour:
     - "\u0413\u0440\u043E\u043C\u043A\u043E\u0441\u0442\u044C \u043C\u0443\u0437\u044B\u043A\u0438"
     - "\u0413\u0440\u043E\u043C\u043A\u043E\u0441\u0442\u044C \u0437\u0432\u0443\u043A\u043E\u0432"
     - "\u041D\u0430\u0437\u0430\u0434 \u0432 \u043C\u0435\u043D\u044E"
+    - "\u041F\u0430\u0443\u0437\u0430"
   - Language: English
     IDs:
     - game_title
@@ -187,7 +189,7 @@ MonoBehaviour:
     - dialog_1_4
     - dialog_1_5
     - dialog_1_6
-    - dialolg_2_1
+    - dialog_2_1
     - dialog_2_2
     - dialog_2_3
     - dialog_2_4
@@ -216,6 +218,7 @@ MonoBehaviour:
     - settings_music_volume
     - settings_sounds_volume
     - back_to_menu
+    - pause_title
     Values:
     - Fairy Snares
     - Start
@@ -271,3 +274,4 @@ MonoBehaviour:
     - Music Volume
     - Sounds Volume
     - Back to menu
+    - Pause
