@@ -132,10 +132,10 @@ RectTransform:
   m_Father: {fileID: 4170336627451500194}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -26.319946, y: 0}
-  m_SizeDelta: {x: -527.84, y: -40}
+  m_AnchorMin: {x: 0, y: 0.5}
+  m_AnchorMax: {x: 1, y: 0.5}
+  m_AnchoredPosition: {x: -26.319946, y: -0.5}
+  m_SizeDelta: {x: -527.84, y: -529}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &4026941276217678449
 CanvasRenderer:
@@ -422,7 +422,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5564216991504832286, guid: 45ce03a9609ffe2468d3478a8daa1aae, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: 0.000007726252
       objectReference: {fileID: 0}
     - target: {fileID: 5564216991504832286, guid: 45ce03a9609ffe2468d3478a8daa1aae, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -439,6 +439,30 @@ PrefabInstance:
     - target: {fileID: 6338075331922994772, guid: 45ce03a9609ffe2468d3478a8daa1aae, type: 3}
       propertyPath: m_Name
       value: SpeakerSpritePlaceholder2
+      objectReference: {fileID: 0}
+    - target: {fileID: 9114784414304717955, guid: 45ce03a9609ffe2468d3478a8daa1aae, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 9114784414304717955, guid: 45ce03a9609ffe2468d3478a8daa1aae, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 9114784414304717955, guid: 45ce03a9609ffe2468d3478a8daa1aae, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 169.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 9114784414304717955, guid: 45ce03a9609ffe2468d3478a8daa1aae, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 210.58612
+      objectReference: {fileID: 0}
+    - target: {fileID: 9114784414304717955, guid: 45ce03a9609ffe2468d3478a8daa1aae, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -72
+      objectReference: {fileID: 0}
+    - target: {fileID: 9114784414304717955, guid: 45ce03a9609ffe2468d3478a8daa1aae, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 45ce03a9609ffe2468d3478a8daa1aae, type: 3}
@@ -499,7 +523,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5564216991504832286, guid: 45ce03a9609ffe2468d3478a8daa1aae, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 191.278
+      value: 191.27802
       objectReference: {fileID: 0}
     - target: {fileID: 5564216991504832286, guid: 45ce03a9609ffe2468d3478a8daa1aae, type: 3}
       propertyPath: m_LocalPosition.x
@@ -535,7 +559,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5564216991504832286, guid: 45ce03a9609ffe2468d3478a8daa1aae, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: -0.000014010748
       objectReference: {fileID: 0}
     - target: {fileID: 5564216991504832286, guid: 45ce03a9609ffe2468d3478a8daa1aae, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -553,13 +577,20 @@ PrefabInstance:
       propertyPath: m_Name
       value: SpeakerSpritePlaceholder
       objectReference: {fileID: 0}
+    - target: {fileID: 9114784414304717955, guid: 45ce03a9609ffe2468d3478a8daa1aae, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9114784414304717955, guid: 45ce03a9609ffe2468d3478a8daa1aae, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9114784414304717955, guid: 45ce03a9609ffe2468d3478a8daa1aae, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 70.6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 45ce03a9609ffe2468d3478a8daa1aae, type: 3}
---- !u!224 &3516630955170794857 stripped
-RectTransform:
-  m_CorrespondingSourceObject: {fileID: 5564216991504832286, guid: 45ce03a9609ffe2468d3478a8daa1aae, type: 3}
-  m_PrefabInstance: {fileID: 9076306752895425143}
-  m_PrefabAsset: {fileID: 0}
 --- !u!114 &8433398335124126274 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 647665115801198645, guid: 45ce03a9609ffe2468d3478a8daa1aae, type: 3}
@@ -571,3 +602,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!224 &3516630955170794857 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 5564216991504832286, guid: 45ce03a9609ffe2468d3478a8daa1aae, type: 3}
+  m_PrefabInstance: {fileID: 9076306752895425143}
+  m_PrefabAsset: {fileID: 0}
