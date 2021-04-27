@@ -16,9 +16,12 @@ public class MoveToPointBehaviour : MonoBehaviour
     [Space]
     [SerializeField] private UnityEvent _onLastPointReached;
 
+    [SerializeField] private FootstepsSoundsPlayer _soundsPlayer;
+
     private void Start()
     {
         StartCoroutine(MoveCoroutine());
+        _soundsPlayer?.Play();
     }
 
     private void MoveToPoint(Transform point)

@@ -196,7 +196,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _rb: {fileID: 1746810489243452395}
-  _animator: {fileID: 3732135642405149212}
+  animator: {fileID: 3732135642405149212}
   _groundCheckBox: {fileID: 1746810490852468721}
   _sideCheckBox: {fileID: 1746810490989948971}
   _commonFlipper: {fileID: 1746810489243452405}
