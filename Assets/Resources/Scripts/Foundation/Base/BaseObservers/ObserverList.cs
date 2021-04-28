@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System.Linq;
 
 namespace Foundation
 {
@@ -57,6 +58,14 @@ namespace Foundation
 
             handle.List = null;
             list.RemoveAt(lastIndex);
+        }
+
+        public ObserverHandle Remove(T item)
+        {
+            var listItem = list.FirstOrDefault(i => i.observer.Equals(item));
+            list.Remove(listItem);
+
+            return listItem.handle;
         }
 
         IEnumerable IObserverList.Enumerate()

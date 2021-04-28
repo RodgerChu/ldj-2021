@@ -14,6 +14,7 @@ namespace Foundation
     public interface IObserverList<T> : IObserverList
     {
         void Add(ref ObserverHandle handle, T observer);
+        ObserverHandle Remove(T item);
         new IEnumerable<T> Enumerate();
     }
 }

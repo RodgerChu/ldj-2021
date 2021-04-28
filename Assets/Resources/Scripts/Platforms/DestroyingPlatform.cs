@@ -25,11 +25,13 @@ public class DestroyingPlatform : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D other)
     {
+        /*
         if (other.gameObject.GetComponent<Character>() && _movingBack == false)
         {
             _animator.SetTrigger("StartDestroying");
             Invoke("FallPlatform", _delayTime);
         }
+        */
     }
 
     private void FallPlatform()

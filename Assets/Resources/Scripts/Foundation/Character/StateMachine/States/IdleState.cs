@@ -4,19 +4,19 @@ using UnityEngine;
 
 namespace Foundation.Character.StateMachine
 {
-    public class IdleState : IState, IStateChangedEventProvider
+    public class IdleState : BaseState, IStateChangedEventProvider
     {
-        public bool CanInterract => true;
-        public bool IsMoving => false;
-        public bool IsInAir => false;
+        public override bool CanInterract => true;
+        public override bool IsMoving => false;
+        public override bool IsInAir => false;
 
-        public ObserverList<IStateChangedEventHolder> OnStateChangedObservers => _observers;
+        public override ObserverList<IStateChangedEventHolder> OnStateChangedObservers => _observers;
         private ObserverList<IStateChangedEventHolder> _observers = new ObserverList<IStateChangedEventHolder>();
 
-        public void OnMovementInput(Vector2 input)
+        public override void OnMovementInput(Vector2 input)
         {
             if (input.y != 0)
-                TransitionToState(new JumpState());
+                TransitionToState(new JumpState(input));
             else if (input.x != 0)
                 TransitionToState(new RunState());
         }
@@ -25,6 +25,14 @@ namespace Foundation.Character.StateMachine
         {
             foreach (var obs in _observers.Enumerate())
                 obs.OnStateChanged(newState);
+        }
+
+        public override void Update(Rigidbody2D playerRigidbody)
+        {
+        }
+
+        public override void Dispose()
+        {
         }
     }
 }

@@ -1,12 +1,8 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
 using Foundation.Movement;
-using Foundation.Interactions;
 
 namespace Foundation.Character.StateMachine
 {
-    public interface IStateMachine: IPlayerMovementInputHandler, IInteractionInputHolder, IPlayerLandedEventHolder
+    public interface IStateMachine: IStateChangedEventProvider, IPlayerMovementInputHandler
     {
         IState CurrentState { get; }
     }

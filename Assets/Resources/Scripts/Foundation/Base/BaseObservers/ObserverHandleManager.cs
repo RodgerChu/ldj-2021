@@ -27,6 +27,12 @@ namespace Foundation
             Add(handle);
         }
 
+        public void Remove<T>(IObserverList<T> observable, T observer)
+        {
+            var removedHandle = observable.Remove(observer);
+            handles.Remove(removedHandle);
+        }
+
         public void Clear()
         {
             foreach (var handle in handles)

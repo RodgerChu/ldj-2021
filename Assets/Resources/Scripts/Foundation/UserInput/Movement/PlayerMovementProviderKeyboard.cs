@@ -7,7 +7,7 @@ namespace Foundation.Movement
     public class PlayerMovementProviderKeyboard: AbstractService<IPlayerMovementInputProvider>, IPlayerMovementInputProvider
     {
         public IObserverList<IPlayerMovementInputHandler> InputObservers => _observers;
-        private ObserverList<IPlayerMovementInputHandler> _observers;
+        private ObserverList<IPlayerMovementInputHandler> _observers = new ObserverList<IPlayerMovementInputHandler>();
 
         private void Update()
         {
@@ -17,12 +17,11 @@ namespace Foundation.Movement
             if (Input.GetKeyDown(KeyCode.Space))
                 userInput.y = 1;
 
-            if (userInput != Vector2.zero)
-                SendUserInput(userInput);
+            SendUserInput(userInput);
         }
 
         private void SendUserInput(Vector2 input)
-        {
+        { 
             foreach (var observer in _observers.Enumerate())
                 observer.OnMovementInput(input);
         }
