@@ -48,6 +48,7 @@ public class EventStarter : MonoBehaviour
 
     private bool IsPlayer(GameObject gObject)
     {
-        return gObject.GetComponent<Player>();
+        return false;
+        //return gObject.GetComponent<Character>();
     }
 }

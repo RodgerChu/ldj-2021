@@ -7,7 +7,6 @@ using Zenject;
 public class DialogStarter : EventStarter
 {
     [SerializeField] private DialogData _dialogData;
-    [SerializeField] private CharacterInputController _charController;
 
     [SerializeField] private UnityEvent _onDialogEnded;
 
