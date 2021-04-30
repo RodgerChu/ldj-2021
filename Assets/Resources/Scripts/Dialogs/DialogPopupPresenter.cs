@@ -4,6 +4,7 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 using DG.Tweening;
+using Foundation.UI.Localization;
 
 public class DialogPopupPresenter : MonoBehaviour
 {

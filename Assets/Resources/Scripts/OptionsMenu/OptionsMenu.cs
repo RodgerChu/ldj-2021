@@ -4,28 +4,30 @@ using UnityEngine;
 using UnityEngine.UI;
 using Zenject;
 
-public class OptionsMenu : MonoBehaviour
+namespace Foundation.Sound
 {
-    [SerializeField] private Slider _musicVolumeSlider;
-    [SerializeField] private Slider _soundsVolumeSlider;
-
-    [Inject] private SoundController _soundOptions;
-
-    private void Start()
+    public class OptionsMenu : AbstractBehaviour
     {
-        _musicVolumeSlider.value = _soundOptions.MusicVolume;
-        _soundsVolumeSlider.value = _soundOptions.SoundVolume;
+        [SerializeField] private Slider _musicVolumeSlider;
+        [SerializeField] private Slider _soundsVolumeSlider;
 
-        _musicVolumeSlider.onValueChanged.AddListener(volume =>
-        {
-            _soundOptions.SetMusicVolume(volume);
-            _soundOptions.SaveSettings();
-        });
+        [Inject] private ISoundsPlayer _soundOptions;
+        [Inject] private IMusicPlayer _musicOptions;
 
-        _soundsVolumeSlider.onValueChanged.AddListener(volume =>
+        private void Start()
         {
-            _soundOptions.SetSoundVolume(volume);
-            _soundOptions.SaveSettings();
-        });
+            _musicVolumeSlider.value = _soundOptions.CurrentVolume;
+            _soundsVolumeSlider.value = _musicOptions.CurrentVolume;
+
+            _musicVolumeSlider.onValueChanged.AddListener(volume =>
+            {
+                _musicOptions.SetVolume(volume);
+            });
+
+            _soundsVolumeSlider.onValueChanged.AddListener(volume =>
+            {
+                _soundOptions.SetVolume(volume);
+            });
+        }
     }
 }

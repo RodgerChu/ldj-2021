@@ -6,6 +6,9 @@ namespace Foundation.Sound
 {
     public interface ISoundsPlayer
     {
+        float CurrentVolume { get; }
+        void SetVolume(float newVolume);
+
         void PlaySound(AudioClip clip);
         void Stop();
     }

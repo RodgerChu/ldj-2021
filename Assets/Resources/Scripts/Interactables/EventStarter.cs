@@ -1,54 +1,57 @@
-using System.Collections;
-using System.Collections.Generic;
+using Foundation.UI;
 using UnityEngine;
 using UnityEngine.Events;
 using Zenject;
 
-public class EventStarter : MonoBehaviour
+
+namespace Foundation.Interactions
 {
-    [Inject] protected HintPresenter _hint;
-
-    [SerializeField] protected string _hintAlias = "hint_press_E";
-    [SerializeField] protected UnityEvent _onInteracted;
-
-    protected bool _interacted = false;
-    private bool _active = false;
-
-    protected virtual void OnInteract()
+    public class EventStarter : MonoBehaviour
     {
-        _interacted = true;
-        _onInteracted?.Invoke();
-    }
+        [Inject] protected IHintController _hint;
 
-    public void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.E) && _active)
+        [SerializeField] protected string _hintAlias = "hint_press_E";
+        [SerializeField] protected UnityEvent _onInteracted;
+
+        protected bool _interacted = false;
+        private bool _active = false;
+
+        protected virtual void OnInteract()
         {
-            OnInteract();
+            _interacted = true;
+            _onInteracted?.Invoke();
         }
-    }
 
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        if (IsPlayer(collision.gameObject) && !_interacted)
+        public void Update()
         {
-            _active = true;
-            _hint.Show(_hintAlias);
+            if (Input.GetKeyDown(KeyCode.E) && _active)
+            {
+                OnInteract();
+            }
         }
-    }
 
-    private void OnTriggerExit2D(Collider2D collision)
-    {
-        if (IsPlayer(collision.gameObject))
+        private void OnTriggerEnter2D(Collider2D collision)
         {
-            _active = false;
-            _hint.Hide();
+            if (IsPlayer(collision.gameObject) && !_interacted)
+            {
+                _active = true;
+                _hint.Show(_hintAlias);
+            }
         }
-    }
 
-    private bool IsPlayer(GameObject gObject)
-    {
-        return false;
-        //return gObject.GetComponent<Character>();
+        private void OnTriggerExit2D(Collider2D collision)
+        {
+            if (IsPlayer(collision.gameObject))
+            {
+                _active = false;
+                _hint.Hide();
+            }
+        }
+
+        private bool IsPlayer(GameObject gObject)
+        {
+            return false;
+            //return gObject.GetComponent<Character>();
+        }
     }
 }

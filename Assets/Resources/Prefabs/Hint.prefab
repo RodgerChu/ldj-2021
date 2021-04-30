@@ -11,10 +11,10 @@ GameObject:
   - component: {fileID: 2289302152241799363}
   - component: {fileID: 2289302152241799367}
   - component: {fileID: 2289302152241799364}
-  - component: {fileID: 2289302152241799365}
-  - component: {fileID: 2289302152241799362}
+  - component: {fileID: 544814069429147088}
+  - component: {fileID: 3460352630421089177}
   m_Layer: 5
-  m_Name: HintPresenter
+  m_Name: Hint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -136,7 +136,20 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
---- !u!114 &2289302152241799365
+--- !u!114 &544814069429147088
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2289302152241799360}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9bdd2726f835043458e7995c76da1be6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _text: {fileID: 3460352630421089177}
+--- !u!114 &3460352630421089177
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -150,16 +163,3 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   InnetText: {fileID: 2289302152241799364}
   _localizationKey: hint_press_E
---- !u!114 &2289302152241799362
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2289302152241799360}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9bdd2726f835043458e7995c76da1be6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _text: {fileID: 2289302152241799365}
