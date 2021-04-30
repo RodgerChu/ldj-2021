@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace Foundation.Sound
 {
-    public interface IMusicPlayer
+    public interface IMusicPlayer: ISoundsPlayer
     {
     }
 }
