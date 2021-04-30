@@ -24,8 +24,9 @@ namespace Foundation.Character.StateMachine
                 TransitionToState(new IdleState());
             else if (input.y != 0)
                 TransitionToState(new JumpState(input));
-            else
+            else           
                 _lastUserInput = input;
+            
         }
 
         private void TransitionToState(IState newState)

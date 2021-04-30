@@ -18,6 +18,10 @@ namespace Foundation.Character.StateMachine
         public ObserverList<IStateChangedEventHolder> OnStateChangedObservers => _onStateChangedObservers;
         private ObserverList<IStateChangedEventHolder> _onStateChangedObservers = new ObserverList<IStateChangedEventHolder>();
 
+        ObserverList<IPlayerSideChangedEventHolder> IPlayerSideChangedEventProvider.PlayerSideChangedObservers => _sideChangedObs;
+        private ObserverList<IPlayerSideChangedEventHolder> _sideChangedObs = new ObserverList<IPlayerSideChangedEventHolder>();
+
+
         private void Awake()
         {
             Observe(_movementInputProvider.InputObservers);
@@ -43,6 +47,7 @@ namespace Foundation.Character.StateMachine
 
             CurrentState = newState;
             Observe(CurrentState.OnStateChangedObservers);
+            
 
             foreach (var obs in _onStateChangedObservers.Enumerate())
                 obs.OnStateChanged(newState);

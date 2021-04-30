@@ -420,6 +420,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7712736815590934428}
   - component: {fileID: 5362878458908544347}
+  - component: {fileID: 80091266}
   m_Layer: 9
   m_Name: CharacterComponents
   m_TagString: Untagged
@@ -455,7 +456,7 @@ Animator:
   m_GameObject: {fileID: 2377377678911262160}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: f4b7a7d522734f5429b31acc25bf4af3, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -464,6 +465,19 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &80091266
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2377377678911262160}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 610931824beabac43a7b4a0d952986a6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _playerAnimator: {fileID: 5362878458908544347}
 --- !u!1 &3676043114802073684
 GameObject:
   m_ObjectHideFlags: 0
@@ -1210,7 +1224,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: db0523aba065aa74cb64435648981579, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _horizontalVelocity: 7.5
+  _horizontalVelocity: 7
   _verticalVelocity: 15
   _maxAmountOfJumps: 2
 --- !u!114 &1881065266466372621
@@ -1314,7 +1328,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.55568004, y: -7.957301}
+  m_Offset: {x: 0.55568004, y: -7.89}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -1325,7 +1339,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 5.6649156, y: 1.7132244}
+  m_Size: {x: 5.6649156, y: 1.5786257}
   m_EdgeRadius: 0
 --- !u!114 &5789083796898843844
 MonoBehaviour:
@@ -1879,6 +1893,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3676043116595068418}
+  - component: {fileID: 189228230}
   m_Layer: 9
   m_Name: Parts
   m_TagString: Untagged
@@ -1903,6 +1918,19 @@ Transform:
   m_Father: {fileID: 7712736815590934428}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &189228230
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3676043116595068419}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eef1aa19ac857104ca48027c0c02302a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _playerTransform: {fileID: 3676043116595068418}
 --- !u!1 &3676043116611279119
 GameObject:
   m_ObjectHideFlags: 0
